@@ -351,6 +351,7 @@ layout: center
 # Grazie!
 
 - Un po' di riferimenti:
+  - [Queste slides](https://github.com/marcopiraccini/linuxday-2024)
   - [The Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)
   - [The GNU Manifesto](https://www.gnu.org/gnu/gnu.html)
   - [sli.dev](https://sli.dev/)
