@@ -201,7 +201,7 @@ flusso unidirezionale
   di quello successivo.
 
 <div style="display: flex; justify-content: center; margin-top: 16px">
-  <img src="/assets/pipe.png" width="500" >
+  <img src="/assets/pipe.png" width="600" >
 </div>
 
 In `bash`:
@@ -221,7 +221,7 @@ layout: center
 ```
 
 <div style="display: flex; justify-content: center; margin-top: 16px">
-  <img src="/assets/ls-wc.png" width="500" >
+  <img src="/assets/ls-wc.png" width="600px" >
 </div>
 
 ---
@@ -239,6 +239,10 @@ layout: center
 cat file.txt | grep "marco" | wc -l
 ```
 
+<div style="display: flex; justify-content: center; margin-top: 16px">
+  <img src="/assets/catgrep.png" >
+</div>
+
 ---
 layout: center
 ---
@@ -251,6 +255,10 @@ layout: center
 ```
 ls -S | head -1 
 ```
+
+<div style="display: flex; justify-content: center; margin-top: 16px">
+  <img src="/assets/head.png"  width="600px">
+</div>
 
 ---
 layout: image-x
@@ -321,13 +329,11 @@ layout: center
 # Stream from youtube
 
 - Linus torvalds introduces Linux 1.0 (1994): https://www.youtube.com/watch?v=qaDpjlFpbfo
-- Can be downloaded using:
 ```bash
 
 yt-dlp 'https://www.youtube.com/watch?v=qaDpjlFpbfo'
 
 ```
-Ma supponiamo di volere lanciare un video di youtube su Mplayer direttamente:
 
 - `yt-dlp -o -`: scrive su stdout
 - `mplayer -`: legge da stdin
