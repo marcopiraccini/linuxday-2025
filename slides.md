@@ -318,7 +318,7 @@ seq 1 6 | shuf | head -n 1 | espeak -v it
 layout: center
 ---
 
-# Download video from youtube:
+# Stream from youtube
 
 - Linus torvalds introduces Linux 1.0 (1994): https://www.youtube.com/watch?v=qaDpjlFpbfo
 - Can be downloaded using:
@@ -344,6 +344,8 @@ yt-dlp $1 -q -o - | mplayer -
 
 ```
 
+---
+layout: center
 ---
 
 # Grazie!
