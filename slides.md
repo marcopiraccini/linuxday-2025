@@ -129,7 +129,7 @@ imageOrder: 2
 - Write programs to handle text streams, because that is a universal interface.
 
 Ne esistono varie "versioni" ma che ruotano attorno agli stessi concetti.
-Questa e' la versione piu' coincisa e' (Peter Salus)
+Questa e' la versione piu' coincisa (Peter Salus)
 
 ---
 layout: image-x
@@ -139,7 +139,7 @@ imageOrder: 2
 
 # Esempio: Filtri e streams
 
-- Un filtro sofyware e' un programma che processa uno *stream* e produce un altro *stream*.
+- Un filtro software e' un programma che processa uno *stream* e produce un altro *stream*.
 - I filtri possono essere usati individualmente, ma sono spesso combinati in "pipelines"
 
 ---
@@ -153,7 +153,7 @@ layout: center
   - Scrivere output su `stdout`/`stderr` (standard output/error)
 - Questo e' il motivo per cui quando lanciate un programma da terminale, vedete il suo output sullo schermo,
   il terminale prende l'output e lo stampa.
-- Funziona perche' ogni processo ha una "file descriptor table" dove 0,1 e 2 sono mappati su stdin, stoud, stderr, rispettivamente. 
+- Funziona perche' ogni processo ha una "file descriptor table" dove 0, 1 e 2 sono mappati su stdin, stoud, stderr, rispettivamente. 
    
 <div style="display: flex; justify-content: center; margin-top: 8px">
   <img src="/assets/inout.png" width="400" >
@@ -197,7 +197,7 @@ layout: center
 
 - Le pipes permettono i dati di un processo di esssere passati tramite un 
 flusso unidirezionale
-- I programmi unix pero' possono anche essere concatenati con le "pipe" (|): lo `stdout` di un processo diventa l'input (`stdin`)
+- I filtri unix possono anche essere concatenati con le "pipe" (|): lo `stdout` di un processo diventa l'input (`stdin`)
   di quello successivo.
 
 <div style="display: flex; justify-content: center; margin-top: 16px">
