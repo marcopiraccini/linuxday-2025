@@ -195,8 +195,8 @@ layout: center
 
 # "Work together and handle streams"
 
-- Le pipes permettono i dati di un processo di esssere passati tramite un 
-flusso unidirezionale
+- Le pipe permettono ai dati di un processo di essere passati ad un altro tramite un 
+flusso unidirezionale.
 - I filtri unix possono anche essere concatenati con le "pipe" (|): lo `stdout` di un processo diventa l'input (`stdin`)
   di quello successivo.
 
