@@ -271,9 +271,10 @@ imageOrder: 2
 - `shuf` li mischia
 - `head -n 1` prende l'inizio di `stdout` (la prima riga)
 - `cowsay` e' la mucca
+- `lolcat` colora
 
 ```bash
-seq 1 6 | shuf | head -n 1 | cowsay
+seq 1 6 | shuf | head -n 1 | cowsay | lolcat
 ```
 
 ...provare anche con `figlet`
