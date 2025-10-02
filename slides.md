@@ -1,8 +1,8 @@
 ---
 theme: purplin
 info: |
-  ## Linux day 2024
-  Unix Phylosophy
+  ## Linux day 2025
+  Unix Philosophy
 align: center
 
 layout: image-x
@@ -12,7 +12,7 @@ imageOrder: 2
 
 # Unix Philosophy
 
-Linux day 2024
+Linux day 2025
 
 ---
 layout: image-x
@@ -28,12 +28,12 @@ imageOrder: 2
  - Maker
  - Linux user dagli anni '90
 
-<div class="flex">
-  <img src="/assets/plt.svg" width="100" >
-  <img src="/assets/remotamente.svg" width="150" >
+<div class="flex gap-8 items-center mt-4">
+  <img src="/assets/platformatic-dark.svg" width="100" >
+  <img src="/assets/remotamente-dark.svg" width="150" >
 </div>
 
-<div class="flex">
+<div class="flex mt-4">
   <img src="/assets/gh.png" >
 </div>
 
@@ -48,7 +48,7 @@ imageOrder: 2
 - Commodore 64 (1985)
 - Amiga 500 (1988)
 - i486 / Pentium (1991/1998)
-- Approx 1996: linux
+- Circa 1996: linux
 - 1999: abbandono definitivamente Windows per RH Linux
 - Currently: [POP!\_OS](https://pop.system76.com/) / Debian
 
@@ -60,12 +60,12 @@ imageOrder: 2
 
 # Storia di Linux
 
-- 25/8/1991: Linus Torvalds [fa funzionare il primo kernel](https://groups.google.com/g/comp.os.minix/c/T9SjMGTSpXk/m/idk9jzNbAQAJ) linux (per fare andare minix sul suo i386).
+- 25/8/1991: Linus Torvalds [annuncia](https://groups.google.com/g/comp.os.minix/c/T9SjMGTSpXk/m/idk9jzNbAQAJ) che sta lavorando a un sistema operativo libero per i386.
 - 1992: X Window System su linux
 - 13/3/1994: Kernel 1.0
 - [Il Kernel oggi](https://github.com/torvalds/linux)
 
-_NOTA_: Quello che chiamiamo "linux" e' in realta' il kernel linux + una collezione di software libero chiamato GNU. Spesso si indica come GNU/Linux
+_NOTA_: Quello che chiamiamo "linux" è in realtà il kernel linux + una collezione di software libero chiamato GNU. Spesso si indica come GNU/Linux
 
 ---
 layout: image-x
@@ -73,7 +73,7 @@ image: ./assets/Ken_Thompson_and_Dennis_Ritchie.jpg
 imageOrder: 2
 ---
 
-# ...ma prima c'e' Unix...
+# ...ma prima c'è Unix...
 
 - 1969: Bell Laboratories sviluppano un sistema operativo per il PDP-7 (in assembly)
 - 1969: [Ken Thompson](https://en.wikipedia.org/wiki/Ken_Thompson) e
@@ -83,7 +83,7 @@ imageOrder: 2
   Riscrivono Unix in C, permettendo il porting su altre piattaforme
 - Ogni vendor si faceva la "sua" versione di Unix
 - 1983: Richard Stallman crea il [GNU Project](https://www.gnu.org/gnu/gnu.html) per creare un sistema operativo
-  libero...che pero' non comprendeva un kernel...fino al 1991!
+  libero...che però non comprendeva un kernel...fino al 1991!
 
 Quindi le radici di linux affondano negli anni '60 e '70.
 
@@ -100,12 +100,12 @@ layout: image-x
 image: ./assets/spaghetti.png
 ---
 
-# Complessita'
+# Complessità
 
-- La complessita' e' un grosso problema nel mondo del software.
-- Software "complesso" e' difficile da capire e da manutenere.
+- La complessità è un grosso problema nel mondo del software.
+- Software "complesso" è difficile da capire e da manutenere.
 - La filosofia di Unix enfatizza la costruzione di codice semplice, compatto, chiaro, modulare e estensibile 
-che puo' essere facilmente mantenuto da sviluppatori diversi rispetto ai creatori originali
+che può essere facilmente mantenuto da sviluppatori diversi rispetto ai creatori originali
 - In generale, si favorisce la composability rispetto a design monolitici
 
 ---
@@ -122,14 +122,34 @@ image: ./assets/socrate.jpg
 imageOrder: 2
 ---
 
-# Unix (Design) Philosophy
+# Unix Philosophy - Doug McIlroy (1978)
 
-- Write programs that do one thing and do it well 
+<div style="font-size: 0.65em;">
+
+[Doug McIlroy](https://en.wikipedia.org/wiki/Douglas_McIlroy) nel [Bell System Technical Journal (1978)](https://archive.org/details/bstj57-6-1899):
+
+- Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new "features".
+- Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input.
+- Design and build software, even operating systems, to be tried early, ideally within weeks. Don't hesitate to throw away the clumsy parts and rebuild them.
+- Use tools in preference to unskilled help to lighten a programming task, even if you have to detour to build the tools and expect to throw some of them out after you've finished using them.
+
+</div>
+
+---
+layout: image-x
+image: ./assets/socrate.jpg
+imageOrder: 2
+---
+
+# Unix Philosophy - Peter H. Salus (1994)
+
+[Peter H. Salus](https://en.wikipedia.org/wiki/Peter_H._Salus) in "A Quarter-Century of Unix" (1994) riassume:
+
+- Write programs that do one thing and do it well
 - Write programs to work together.
 - Write programs to handle text streams, because that is a universal interface.
 
-Ne esistono varie "versioni" ma che ruotano attorno agli stessi concetti.
-Questa e' la versione piu' coincisa (Peter Salus)
+Questa è la versione più concisa e citata.
 
 ---
 layout: image-x
@@ -139,7 +159,7 @@ imageOrder: 2
 
 # Esempio: Filtri e streams
 
-- Un filtro software e' un programma che processa uno *stream* e produce un altro *stream*.
+- Un filtro software è un programma che processa uno *stream* e produce un altro *stream*.
 - I filtri possono essere usati individualmente, ma sono spesso combinati in "pipelines"
 
 ---
@@ -148,12 +168,12 @@ layout: center
 
 # Filtri Unix
 
-- Ogni processo lanciato su (emulazione di) terminale puo':
+- Ogni processo lanciato su (emulazione di) terminale può:
   - Ricevere input da `stdin` (standard input)
   - Scrivere output su `stdout`/`stderr` (standard output/error)
-- Questo e' il motivo per cui quando lanciate un programma da terminale, vedete il suo output sullo schermo,
+- Questo è il motivo per cui quando lanciate un programma da terminale, vedete il suo output sullo schermo,
   il terminale prende l'output e lo stampa.
-- Funziona perche' ogni processo ha una "file descriptor table" dove 0, 1 e 2 sono mappati su stdin, stoud, stderr, rispettivamente. 
+- Funziona perché ogni processo ha una "file descriptor table" dove 0, 1 e 2 sono mappati su stdin, stdout, stderr, rispettivamente. 
    
 <div style="display: flex; justify-content: center; margin-top: 8px">
   <img src="/assets/inout.png" width="400" >
@@ -178,8 +198,8 @@ image: ./assets/wc.png
 
 ## "Do one thing and do it well"
 
-Alcuni dei filtri piu' usati:
-  - wc
+Alcuni dei filtri più usati:
+- wc
 - grep
 - sort
 - head / tail
@@ -216,7 +236,7 @@ layout: center
 # Quanti file ho nel folder?
 
 ```bash
- ls -lah | wc -l
+ ls | wc -l
 
 ```
 
@@ -247,9 +267,9 @@ cat file.txt | grep "marco" | wc -l
 layout: center
 ---
 
-# Troviamo il file piu' grande in un folder
+# Troviamo il file più grande in un folder
 
-- `ls -S`: ordina per dimensione, il piu' grande per primo
+- `ls -S`: ordina per dimensione, il più grande per primo
 - `head -1`: prende il primo elemento
 
 ```
@@ -267,10 +287,13 @@ imageOrder: 2
 ---
 
 # Dado-Mucca a sei facce
+
+<div style="font-size: 0.85em;">
+
 - `seq` stampa una sequenza di numeri
 - `shuf` li mischia
 - `head -n 1` prende l'inizio di `stdout` (la prima riga)
-- `cowsay` e' la mucca
+- `cowsay` è la mucca
 - `lolcat` colora
 
 ```bash
@@ -278,6 +301,8 @@ seq 1 6 | shuf | head -n 1 | cowsay | lolcat
 ```
 
 ...provare anche con `figlet`
+
+</div>
 
 ---
 layout: center
@@ -312,7 +337,7 @@ layout: center
 ```bash
 espeak -v it test
 ```
-...che ovviamente e' un filtro
+...che ovviamente è un filtro
 
 ```bash
 echo "marco" | espeak -v it 
@@ -357,10 +382,26 @@ layout: center
 
 # Grazie!
 
-- Un po' di riferimenti:
-  - [Queste slides](https://github.com/marcopiraccini/linuxday-2024)
-  - [The Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)
-  - [The GNU Manifesto](https://www.gnu.org/gnu/gnu.html)
-  - [sli.dev](https://sli.dev/)
+<div class="grid grid-cols-2 gap-16 mt-16" style="font-size: 1.3em;">
 
----
+<div>
+
+### Contatti
+- [LinkedIn](http://it.linkedin.com/in/marcopiraccini)
+- [Twitter](http://twitter.com/MarcoPiraccini)
+- [GitHub](https://github.com/marcopiraccini)
+- [Email](mailto:marco.piraccini@gmail.com)
+
+</div>
+
+<div>
+
+### Riferimenti
+- [Queste slides](https://github.com/marcopiraccini/linuxday-2024)
+- [The Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)
+- [The GNU Manifesto](https://www.gnu.org/gnu/gnu.html)
+- [sli.dev](https://sli.dev/)
+
+</div>
+
+</div>
