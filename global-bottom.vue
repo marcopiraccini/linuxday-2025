@@ -1,6 +1,6 @@
 <!-- global-bottom.vue -->
 <template>
-  <BarBottom title="Linux day 2024">
+  <BarBottom title="Linux day 2025">
     <Item text="marcopiraccini">
       <carbon:logo-github />
     </Item>
