@@ -235,13 +235,16 @@ layout: center
 
 # Quanti file ho nel folder?
 
-```bash
- ls | wc -l
+<div style="font-size: 1.3em;">
 
+```bash
+ls | wc -l
 ```
 
-<div style="display: flex; justify-content: center; margin-top: 16px">
-  <img src="/assets/ls-wc.png" width="600px" >
+</div>
+
+<div style="display: flex; justify-content: center; margin-top: 32px">
+  <img src="/assets/ls-wc.png" width="700px" >
 </div>
 
 ---
@@ -250,17 +253,20 @@ layout: center
 
 # Quante volte un file contiene una parola?
 
+<div style="font-size: 1.1em;">
+
 - `cat` riproduce il file su `stdout`
 - `grep` filtra le righe che contengono il parametro
 - `wc -l` le conta
-
 
 ```bash
 cat file.txt | grep "marco" | wc -l
 ```
 
-<div style="display: flex; justify-content: center; margin-top: 16px">
-  <img src="/assets/catgrep.png" >
+</div>
+
+<div style="display: flex; justify-content: center; margin-top: 32px">
+  <img src="/assets/catgrep.png" width="700px">
 </div>
 
 ---
@@ -269,15 +275,19 @@ layout: center
 
 # Troviamo il file più grande in un folder
 
+<div style="font-size: 1.1em;">
+
 - `ls -S`: ordina per dimensione, il più grande per primo
 - `head -1`: prende il primo elemento
 
-```
-ls -S | head -1 
+```bash
+ls -S | head -1
 ```
 
-<div style="display: flex; justify-content: center; margin-top: 16px">
-  <img src="/assets/head.png"  width="600px">
+</div>
+
+<div style="display: flex; justify-content: center; margin-top: 32px">
+  <img src="/assets/head.png" width="700px">
 </div>
 
 ---
@@ -310,13 +320,15 @@ layout: center
 
 # Mucca - versione script bash
 
-- Possiamo comporre tutto in uno script `bash`, in modo tale da poterlo lanciare direttamente
-- Non dimenticate di impostare i diritti di esecuzione (`chmod`)
+<div style="font-size: 1.1em;">
+
+Possiamo comporre tutto in uno script `bash`, in modo tale da poterlo lanciare direttamente
+
+Non dimenticate di impostare i diritti di esecuzione (`chmod`)
 
 ```bash
 #!/bin/bash
 seq 1 6 | shuf | head -n 1 | cowsay
-
 ```
 
 ...o usando `$1` per passare un parametro
@@ -324,57 +336,142 @@ seq 1 6 | shuf | head -n 1 | cowsay
 ```bash
 #!/bin/bash
 seq 1 $1 | shuf | head -n 1 | cowsay
-
 ```
+
+</div>
 ---
 layout: center
 ---
 
 # Aggiungiamo la voce!
 
-- possiamo usare espeak:
+<div style="font-size: 1.5em; line-height: 1.8;">
+
+### possiamo usare espeak:
 
 ```bash
 espeak -v it test
 ```
-...che ovviamente è un filtro
+
+### ...che ovviamente è un filtro
 
 ```bash
-echo "marco" | espeak -v it 
+echo "marco" | espeak -v it
 ```
 
-- Dado parlante:
+### Dado parlante:
+
 ```bash
 seq 1 6 | shuf | head -n 1 | espeak -v it
-
 ```
+
+</div>
 ---
 layout: center
 ---
 
 # Stream from youtube
 
-- Linus torvalds introduces Linux 1.0 (1994): https://www.youtube.com/watch?v=qaDpjlFpbfo
-```bash
+<div style="font-size: 1.1em;">
 
-yt-dlp 'https://www.youtube.com/watch?v=qaDpjlFpbfo'
-
-```
+Linus torvalds introduces Linux 1.0 (1994):
+https://www.youtube.com/watch?v=qaDpjlFpbfo
 
 - `yt-dlp -o -`: scrive su stdout
 - `mplayer -`: legge da stdin
 
-
 ```bash
-yt-dlp -q -o - 'https://www.youtube.com/watch?v=qaDpjlFpbfo'  | mplayer -
+yt-dlp -q -o - 'https://www.youtube.com/watch?v=qaDpjlFpbfo' | mplayer -
 ```
-Versione script: 
+
+Versione script:
 
 ```bash
 #!/bin/bash
-yt-dlp $1 -q -o - | mplayer - 
-
+yt-dlp $1 -q -o - | mplayer -
 ```
+
+</div>
+
+---
+layout: center
+---
+
+# Altri esempi interessanti
+
+<div style="font-size: 1.1em;">
+
+### Top 10 comandi più usati dalla history
+
+```bash
+history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
+```
+
+- `awk '{print $2}'`: estrae il secondo campo (il comando)
+- `uniq -c`: conta le occorrenze
+- `sort -rn`: ordina numericamente in modo inverso
+
+</div>
+
+---
+layout: center
+---
+
+# Password casuale
+
+<div style="font-size: 1.1em;">
+
+```bash
+tr -dc A-Za-z0-9 < /dev/urandom | head -c 16 | cowsay
+```
+
+- `/dev/urandom`: genera dati casuali
+- `tr -dc A-Za-z0-9`: filtra solo lettere e numeri
+- `head -c 16`: prende i primi 16 caratteri
+
+</div>
+
+---
+layout: center
+---
+
+# Previsioni meteo nel terminale
+
+<div style="font-size: 1.1em;">
+
+```bash
+curl wttr.in/Rome | lolcat
+```
+
+- `curl wttr.in/Rome`: scarica le previsioni meteo per Roma
+- `lolcat`: colora l'output
+
+Provate anche: `curl wttr.in/Bologna` o `curl wttr.in/`
+
+</div>
+
+---
+layout: center
+---
+
+# ASCII art
+
+<div style="font-size: 1.1em;">
+
+```bash
+figlet "Linux Day" | lolcat
+```
+
+o combinato con `cowsay`:
+
+```bash
+figlet "Linux Day" | cowsay -n | lolcat
+```
+
+- `figlet`: converte testo in ASCII art
+- `cowsay -n`: la mucca dice il testo (senza bubble)
+
+</div>
 
 ---
 layout: center
@@ -397,7 +494,7 @@ layout: center
 <div>
 
 ### Riferimenti
-- [Queste slides](https://github.com/marcopiraccini/linuxday-2024)
+- [Queste slides](https://github.com/marcopiraccini/linuxday-2025)
 - [The Unix Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)
 - [The GNU Manifesto](https://www.gnu.org/gnu/gnu.html)
 - [sli.dev](https://sli.dev/)
