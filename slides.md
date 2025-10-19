@@ -277,7 +277,7 @@ layout: center
 
 <div style="font-size: 1.1em;">
 
-- `ls -S`: ordina per dimensione, il più grande per primo
+- `ls -S`: ordina per dimensione, il più grande per primo, un file per riga (se c'e' un |)
 - `head -1`: prende il primo elemento
 
 ```bash
@@ -440,13 +440,12 @@ layout: center
 <div style="font-size: 1.1em;">
 
 ```bash
-curl wttr.in/Rome | lolcat
+curl wttr.in/Bologna | lolcat
 ```
 
-- `curl wttr.in/Rome`: scarica le previsioni meteo per Roma
+- `curl wttr.in/Bologna`: scarica le previsioni meteo per Bologna
 - `lolcat`: colora l'output
 
-Provate anche: `curl wttr.in/Bologna` o `curl wttr.in/`
 
 </div>
 
