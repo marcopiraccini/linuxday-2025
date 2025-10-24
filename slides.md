@@ -172,7 +172,7 @@ layout: center
   - Ricevere input da `stdin` (standard input)
   - Scrivere output su `stdout`/`stderr` (standard output/error)
 - Questo è il motivo per cui quando lanciate un programma da terminale, vedete il suo output sullo schermo,
-  il terminale prende l'output e lo stampa.
+  il terminale prende stdout e lo stampa.
 - Funziona perché ogni processo ha una "file descriptor table" dove 0, 1 e 2 sono mappati su stdin, stdout, stderr, rispettivamente. 
    
 <div style="display: flex; justify-content: center; margin-top: 8px">
